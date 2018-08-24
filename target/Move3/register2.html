@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title> Register2 </title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="register.css" rel ="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  </head>
+  <body>
+    <header>
+      <h2> MOVE </h2>
+    </header>
+    <div class= "navbar">
+      <a href="homepage.html">Home</a>
+    </div>
+  
+    <h1> Register </h1>
+    
+    <section id = "registration"> 
+    <div id = "registration-form"> 
+        <p> There are two different account types, Guest and Admin. They have the following features: </p>
+        
+<table>
+  <tr>
+    <th style="width:50%">Features</th>
+    <th>Guest</th>
+    <th>Admin</th>
+  </tr>
+    <tr>
+    <td>Create a team</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Upload moves</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Comment on moves</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Delete any comments</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Edit/Delete the current stock of moves</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Remove members from your team</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+</table>
+        <div id = btn>
+        <input type = button id= "guest-reg" value = "Register as Guest" onclick ="parent.location='registerGuest.html'">
+        <input type = button id= "admin-reg" value = "Register as Admin" onclick ="parent.location='registerAdmin.html'">
+        </div>
+        
+     <!--   <input id= "radio1" type = "radio" name = "account-type" value = "guest" onclick = "registerAsGuest()" checked>
+            <label> Guest </label>   <a href="registerGuest.html">reg</a>
+    <input id = "radio2" type = "radio" name = "account-type" value = "admin" onclick = "registerAsAdmin()" unchecked> 
+  
+        <label> Admin </label>       <a href="registerAdmin.html">reg</a> -->
+              </div> 
+               </section>
+   </body>
+</html>
+    
+    <!-- <table id = account-comparison> 
+                <h2> Account Features</h2>
+                <tr> 
+                    <th> Admin features </th>
+                    <th> Guest features </th>
+                </tr>
+                   </table>
+
+            <br>
+           <p>Select your desired account type: </p> 
+            <br> -->

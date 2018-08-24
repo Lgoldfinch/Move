@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title> Home page </title>
+    <script src= "homepage.js"> </script>
+    <link rel ="stylesheet" type="text/css" href="homepage.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="LoggedInPage.css" rel ="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">$.get("localhost:8080/move/Louis/register/registerAttempt")</script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>  
+     <header> 
+        </header>
+         <div class= "navbar">
+            <a href="homepage.html">Home</a>
+        </div> 
+        <h1> MOVE </h1>
+    <div class="container">    
+        <div id="loginbox" style="margin-top:px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px">
+                        </div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-email" type="text" class="form-control" name="enteremail" value="" placeholder="Enter email here">                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="...And your password here">
+                            </div>
+
+                                <div style="margin-top:10px" class="form-group">
+                                 
+
+                                    <div class="col-sm-12 controls">
+                                      <a id="btn-login" class="btn btn-success" onclick= "login()">Login  </a>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account?
+                                        <a href="register2.html"> 
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>    
+                        </div>                     
+                    </div>  
+        </div>
+        </div>
+        
+        <div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+         <div id = "About Move"> 
+      <h2> About Move</h2> 
+      <h5 class="w3-padding-32">
+
+          Move is a web based...which aims to enhance team performance and organisation by having one place to store it all...yadayada.     
+               
+        </h5>
+          </div>
+      </div>
+      </div>
+      </div>
+    </body>
+</html>

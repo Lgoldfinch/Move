@@ -1,0 +1,81 @@
+<html>
+<head>
+    <link rel ="stylesheet" type="text/css" href="LoggedInPage.css">
+    <link rel ="stylesheet" type="text/css" href="ViewTheMoves.css">
+<script type ="text/javascript" src="LoggedInPage.js"> </script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="LoggedInPage.css" rel ="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    </head>
+    <body>  
+     <header> 
+           <h2> MOVE </h2>
+        </header>
+        
+        <div class= "navbar">
+            <a href="LoggedInPage.html">Home</a>
+              <div class="dropdown">
+    <button class="dropbtn">Team
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="TeamFinder.html">Team Finder</a>
+      <a href="CreateTeam.html">Create Team</a>
+                  </div>
+          </div> 
+            <div class="dropdown">
+    <button class="dropbtn">Forum
+      <i class="fa fa-caret-down"></i>
+    </button>
+                <div class="dropdown-content">
+      <a href="#">Forums</a>
+      <a href="#">Forum stuff</a>
+                  </div>
+            </div>
+             <div class="dropdown">
+    <button class="dropbtn">The Moves
+      <i class="fa fa-caret-down"></i>
+    </button>
+                <div class="dropdown-content">
+      <a href="ViewTheMoves.html">View the Moves</a>
+                  </div>
+            </div>
+        </div>
+        
+        <section id = "moves"> 
+        <h4> Move name: The Spinning Orange </h4>
+        <img src="exampleImage.png" width= "30%" height = "30%">
+            
+        <div class="container">
+    <div class="col-lg-4 col-sm-6 text-center">
+    <div class="well">
+        <h4> Any questions</h4>
+    <div class="input-group">
+        <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Write your message here..." />
+	    <span class="input-group-btn" onclick="addComment()">     
+            <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Add Comment</a>
+        </span>
+    </div>
+    <hr data-brackets-id="12673">
+    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+        <strong class="pull-left primary-font">James</strong>
+        <small class="pull-right text-muted">
+           <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+        <br>
+        <li class="ui-state-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
+        <br>
+         <strong class="pull-left primary-font">Taylor</strong>
+        <small class="pull-right text-muted">
+           <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+        <br>
+        <li class="ui-state-default">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+        
+    </ul>
+    </div>
+</div>    
+            </div>    
+        </section>
+    </body>
+</html>

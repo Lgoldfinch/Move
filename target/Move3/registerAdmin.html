@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title> Register as Admin </title>
+      <script type= "text/javascript" src = "register.js"> </script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="register.css" rel ="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  </head>
+  <body>
+    <header>
+      <h2> MOVE </h2>
+    </header>
+    <div class= "navbar">
+      <a href="homepage.html">Home</a>
+    </div>
+  
+    <section id = "registration"> 
+    <form id = "registration-form"> 
+        <h3> Admin Registration </h3>
+    <input type = "email" id = "admin-email" name = "email" placeholder = "Email">
+        <br>
+        <input type ="text" id = "admin-first-name" name = "first-name" placeholder = "First Name">
+        <br>
+        <input type ="text" id = "admin-last-name" name = "last-name" placeholder = "Last Name">
+        <br>
+        <input type ="password" id = "admin-password" name = "password" placeholder = "Password">
+        <br>
+        <input type ="password" id = "admin-confirm-password" name = "confirm-password" placeholder = "Confirm Password">
+        <br>
+        <input type ="button" name = "register" value = "Register" onclick= "submitRegAdmin()" >
+        <input type ="button" name = "Back" value = "Back" onclick= "back()" >
+    </form>
+    </section>
+ </body>
+  
+</html>
