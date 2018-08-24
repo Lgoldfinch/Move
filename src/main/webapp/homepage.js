@@ -11,7 +11,6 @@ function login() {
 	xhr.send(data);
 	xhr.onload = function () {
 		let reply = JSON.parse(xhr.response);
-		console.log(reply);
 		if (reply.login === "success") {
 			sessionStorage.setItem("accountType", reply.accountType);
 			window.location.href = 'LoggedInPage.html';

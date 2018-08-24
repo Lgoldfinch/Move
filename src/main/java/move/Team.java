@@ -41,13 +41,15 @@ public class Team {
 			String sql = "SELECT Team_id FROM Team ORDER BY Team_id DESC LIMIT 1"; // this was all user but I changed it to team...did i make a mistake?
 			ResultSet rs = stmt.executeQuery(sql); 
 			while(rs.next()) {
-				int teamID = rs.getInt("Team_id");
+				this.teamID = rs.getInt("Team_id");
 				teamID = teamID + 1;
-				String sql3 = "INSERT INTO Team VALUES ('"+teamID+"','"+cta.getTeamName()+"', '"+cta.getPassword()+"')";
-				stmt.executeQuery(sql);
 			}
-			System.out.println("Team created, Name: '"+cta.getTeamName()+"', Password: '"+cta.getPassword()+"'");
 			rs.close();
+			sql = "INSERT INTO Team VALUES ('"+teamID+"','"+cta.getTeamName()+"', '"+cta.getPassword()+"')";
+			System.out.println("Team created, Name: '"+cta.getTeamName()+"', Password: '"+cta.getPassword()+"'");
+			stmt.executeUpdate(sql);
+			return "{\"teamID\":\""+teamID+"\"}"; 
+			
 		}
 		catch(SQLException se) {
 			se.printStackTrace();
@@ -55,7 +57,7 @@ public class Team {
 		catch(Exception e) { 
 			e.printStackTrace();
 		}
-		return "{\"teamCreate\":\"success\"}"; 
+		return "{\"teamCreate\":\"fail\"}"; 
 	}
 
 	public boolean addPlayer2(int userID, String passwordAttempt, String teamName) {
