@@ -8,6 +8,7 @@ move\GuestUser.class
 interoperability\JAXActivator.class
 simple\LoginAttempt.class
 move\Main.class
+move\Video.class
 move\Register.class
 move\Login.class
 move\Text.class

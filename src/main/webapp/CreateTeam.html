@@ -1,19 +1,14 @@
 <html>
 <head>
-    <link rel ="stylesheet" type="text/css" href="LoggedInPage.css">
 <script type ="text/javascript" src="team.js"> </script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="LoggedInPage.css" rel ="stylesheet" type="text/css"/>
+    <link href="CreateTeam.css" rel ="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel ="stylesheet" type="text/css" href="TeamFinder.css">
     </head>
     <body>  
-     <header> 
-           <h2> MOVE </h2>
-        </header>
-        
         <div class= "navbar">
             <a href="LoggedInPage.html">Home</a>
               <div class="dropdown">
@@ -37,8 +32,8 @@
         </div>
         
          <section id = "team-creator">
-               <h3> Create a Team </h3>
-        If you're looking to create a team, you need to make sure you have administrative privileges first by subscribing. <br>
+               <h2> Create a Team </h2>
+        <p> If you're looking to create a team, you need to make sure you have administrative privileges first by subscribing.<p>  
     <form id = "tc-form">  
     <input type = "text" id = "team-name" name = "team-name" placeholder = "Team Name">
         <br>
@@ -47,7 +42,7 @@
         <input type = "password" id = "confirm-password" placeholder = "Confirm Password"> 
         <br>
         <input type = "button" id = "create-team" value = "Create Team" onclick= "createTeam()"> <!--- this will need to assess whether the user is guest or admin, then generate a set of boxes with the inputs needed to create a team. How do you back information from the server to Java indicating what user type the user is? ---> 
-             </form>       
+        </form>       
         </section>
     </body>
 </html>

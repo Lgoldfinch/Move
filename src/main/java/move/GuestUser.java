@@ -1,9 +1,5 @@
 package move;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-
 public class GuestUser extends User {
 	
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -17,7 +13,7 @@ public class GuestUser extends User {
 	private int userID; 
 	private int accountID = 1;
 
-	public GuestUser(String email, int userID, int accountID) { // Do I need to do - this.email...etc when Ive already made a constructor.
+	public GuestUser(String email, int userID, int accountID) { 
 		super(email, userID, accountID);
 	
 	}

@@ -25,7 +25,7 @@ public class Login {
 
 	private String email, password, emailAttempt, passwordAttempt;
 	private boolean passwordSuccess, emailSuccess;
-	private int accountID;
+	private int accountID, teamID;
 
 	public Login() {
 	}
@@ -35,7 +35,6 @@ public class Login {
 	@Consumes("Application/json")
 	@Path("/loginAttempt")
 	public String loginAttempt(LoginAttempt la) { 
-		//	return "{'email':'" + la.getEmail() + "'. 'password' : '" + la.getPassword() + "'}";
 		try( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 				Statement stmt = conn.createStatement();) {
 
@@ -60,13 +59,13 @@ public class Login {
 			}
 			rs.close();
 
-			String sql2 = "SELECT Password FROM user WHERE Password ='"+la.getPassword()+"' AND Email = '"+la.getEmail()+"'";
-			ResultSet rs2 = stmt.executeQuery(sql2); ///////// Checking password
-			if (rs2.next()) {
-				rs2.first();
+			sql = "SELECT Password FROM user WHERE Password ='"+la.getPassword()+"' AND Email = '"+la.getEmail()+"'";
+			rs = stmt.executeQuery(sql); ///////// Checking password
+			if (rs.next()) {
+				rs.first();
 			}
 
-			password = rs2.getString("password"); 			
+			password = rs.getString("password"); 			
 			if (password.length() == 0) {
 				passwordSuccess = false;
 			}
@@ -78,19 +77,19 @@ public class Login {
 			else {
 				passwordSuccess = false;
 			}
-			rs2.close();
+			rs.close();
 
 			if (passwordSuccess && emailSuccess) {
-				String sql3 = "SELECT account_id from user WHERE email = '"+la.getEmail()+"'";
-				ResultSet rs3 = stmt.executeQuery(sql3); // Getting accountID so that browser can use webstorage.
-				if (rs3.next()) {
-					rs3.first();
+			     sql = "SELECT account_id from user WHERE email = '"+la.getEmail()+"'";
+				rs = stmt.executeQuery(sql); // Getting accountID so that browser can use webstorage.
+				if (rs.next()) {
+					rs.first();
 				}
-				accountID = rs3.getInt("account_id");
-				rs3.close();
+				accountID = rs.getInt("account_id");
+				rs.close();
 			}
+			
 		}
-
 		catch(SQLException se) {
 			se.printStackTrace();
 		}
@@ -99,7 +98,7 @@ public class Login {
 		}
 		if (passwordSuccess && emailSuccess) {
 			System.out.println("success"); 
-			return "{\"login\":\"success\",\"accountType\":\""+accountID+"\"}"; 
+			return "{\"login\":\"success\",\"accountType\":\""+accountID+"\",\"teamID\":\""+teamID+"\"}"; 
 		}
 		else {
 			System.out.println("failure"); 

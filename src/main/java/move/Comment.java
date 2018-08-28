@@ -1,4 +1,4 @@
-package move;
+package move; 
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Comment{
+public class Comment{ // Did not implement this in my Full Stack. 
 
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	static final String DB_URL = "jdbc:mysql://localhost/movedb?serverTimezone=UTC"; // Will need the time changed here.
@@ -15,7 +15,7 @@ public class Comment{
 	static final String Pass = "root";
 
 	private User AdminUser, GuestUser;
-	private String comment; //Might be better to be use them as objects not strings?
+	private String comment; 
 	private int commentID, accountID, userID;
 	
 	public Comment(int userID, String comment) {
@@ -23,7 +23,7 @@ public class Comment{
 		this.userID = userID;
 	}
 
-	public String leaveComment(int userID, String comment) {  // Could use AdminUser and GuestUser as objects in this potentially? Need to generate a comment ID.
+	public String leaveComment(int userID, String comment) { 
 
 		try( Connection conn = DriverManager.getConnection(DB_URL,USER,Pass);
 				Statement stmt = conn.createStatement();) {
@@ -82,22 +82,6 @@ public class Comment{
 			stmt.executeUpdate(sql);
 			System.out.println("Comment deleted");
 		
-//			String sql = "SELECT account_id FROM Comment WHERE User_ID = '"+userID+"' && Comment_ID = '"+commentID+"'";
-//			ResultSet rs = stmt.executeQuery(sql);
-//			while (rs.next()) {
-//				int accountID = rs.getInt("account_id");
-//				if (accountID == 2) {
-//					String sql2 = "Delete FROM Comment WHERE comment_id = '"+commentID+"'";	
-//					stmt.executeUpdate(sql2);
-//					System.out.println("Comment deleted");
-//					return true;
-//				}
-//				else {
-//					System.out.println("Comment not deleted");
-//					return false;
-				
-			
-//			rs.close();
 		}
 		catch(SQLException se) {
 			se.printStackTrace();
@@ -127,12 +111,4 @@ public class Comment{
 		}
 		return "__";
 	}
-	
-//	String sql2 = "SELECT account_id FROM comment WHERE account_id = '"+userID+"'";
-//	ResultSet rs2 = stmt.executeQuery(sql2);
-//	if (rs2.next()) {
-//		rs2.first(); 
-//	}
-//	accountID = rs2.getInt("account_id");
-//	rs2.close(); // Deleted accountID from the table.
 }

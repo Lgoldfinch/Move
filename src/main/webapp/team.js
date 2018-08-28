@@ -25,6 +25,6 @@ function createTeam() {
 		}
 	}
 	else { 
-		return alert("Can't create team as you do not have the minerals");
+		return alert("Can't create team as you do not have the rights.");
 	}
 }
